@@ -17,11 +17,11 @@ def plot_9be_sigma():
     plt.plot(q_vals, pst, 'k-', lw=2, label=r"$^9$Be $\to$ $^9_\Sigma$He (1p $\to$ 1s, $L=1$)")
     
     # Highlight typical ranges
-    # (pi, K) at ~1.2 GeV/c, forward angles => q ~ 400-500 MeV/c
+    # (pi, K) at ~1.2 GeV/c, forward angles => q ~ 350-450 MeV/c
     plt.axvspan(350, 450, color='r', alpha=0.15, label=r"$(\pi, K)$ typical $q$ range")
     
-    # (K, pi) at ~0.6 GeV/c, forward angles => q ~ 50-150 MeV/c
-    plt.axvspan(50, 150, color='b', alpha=0.15, label=r"$(K, \pi)$ typical $q$ range")
+    # (K, pi) at ~1.5 GeV/c, forward angles => q ~ 150-250 MeV/c
+    plt.axvspan(150, 250, color='b', alpha=0.15, label=r"$(K, \pi)$ typical $q$ range")
 
     plt.xlabel("Momentum Transfer q (MeV/c)", fontsize=12)
     plt.ylabel("Relative Sticking Probability $P_{st}(q)$", fontsize=12)
@@ -30,7 +30,7 @@ def plot_9be_sigma():
     plt.legend()
     
     plt.text(400, 0.5, r"$(\pi^-, K^+)$" "\n" r"High $q$", fontsize=10, color='r', ha='center')
-    plt.text(100, 0.5, r"$(K^-, \pi^+)$" "\n" r"Low $q$", fontsize=10, color='b', ha='center')
+    plt.text(200, 0.5, r"$(K^-, \pi^+)$" "\n" r"Low $q$", fontsize=10, color='b', ha='center')
 
     plt.savefig("pst_9be_plot.png", dpi=300)
     print("Plot saved to pst_9be_plot.png")
